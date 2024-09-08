@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #333;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+section .signup {
+  position: relative;
+  width: 400px;
+  background: #444;
+  z-index: 1000;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+section .signup .content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+section .signup .content h2 {
+  font-size: 2.5em;
+  color: #ff4081;
+  text-transform: uppercase;
+}
+
+section .signup .content .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section .signup .content .form .inputBox {
+  position: relative;
+  width: 100%;
+}
+
+section .signup .content .form .inputBox input {
+  width: 100%;
+  background: #555;
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+}
+
+section .signup .content .form .inputBox label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 0.9em;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+section .signup .content .form .inputBox input:focus ~ label,
+section .signup .content .form .inputBox input:valid ~ label {
+  top: -10px;
+  font-size: 0.75em;
+  color: #ff4081;
+}
+
+section .signup .content .form input[type="submit"] {
+  padding: 15px;
+  background: #ff4081;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+  transition: background 0.3s, transform 0.3s;
+}
+
+section .signup .content .form input[type="submit"]:hover {
+  background: #e91e63;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  section .signup {
+    width: 90%;
+    padding: 20px;
+  }
+}

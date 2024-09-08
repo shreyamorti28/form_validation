@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <div class="signup">
+            <div class="content">
+                <h2>Signup</h2>
+                <form id="signupForm" action="/submit_signup" method="post" class="form">
+                    <div class="inputBox">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" id="password" name="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+                        <label for="confirm_password">Confirm Password</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> Show Password
+                    </div>
+                    <input type="submit" value="Signup">
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
